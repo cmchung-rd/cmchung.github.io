@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miscellaneous — Christian Chung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Christian Chung</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="misc.html" class="active">Misc</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page -->
+  <div class="page">
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Miscellaneous</h1>
+        <p>Things outside the lab — hobbies, side projects, reads, and whatever else I find interesting.</p>
+      </div>
+
+      <section>
+        <div class="items-grid">
+
+          <!-- Item 1 -->
+          <div class="item-card">
+            <span class="label">Side Project</span>
+            <h3>Project Name</h3>
+            <p>
+              Description of a side project, creative endeavor, or tool you've built outside of your core research.
+            </p>
+            <div class="card-links">
+              <a href="#">Link &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="item-card">
+            <span class="label">Hobby</span>
+            <h3>Activity or Interest</h3>
+            <p>
+              Share something personal — photography, climbing, cooking, reading lists, music, travel, etc.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="item-card">
+            <span class="label">Reading</span>
+            <h3>Book Recommendations</h3>
+            <p>
+              Favorite books, articles, or resources you'd recommend to others.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="item-card">
+            <span class="label">Community</span>
+            <h3>Outreach &amp; Teaching</h3>
+            <p>
+              Mentorship, science communication, workshops, or community involvement you'd like to highlight.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Christian Chung</p>
+    </div>
+  </footer>
+
+</body>
+</html>

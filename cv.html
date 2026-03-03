@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Christian Chung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Christian Chung</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+        <li><a href="misc.html">Misc</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page -->
+  <div class="page">
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Curriculum Vitae</h1>
+      </div>
+
+      <section>
+
+        <!-- Download link -->
+        <a href="#" class="cv-download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+
+        <!-- Education -->
+        <div class="cv-section">
+          <h2>Education</h2>
+
+          <div class="cv-entry">
+            <span class="cv-date">2022 — Present</span>
+            <div class="cv-info">
+              <h3>PhD, Bioengineering</h3>
+              <p>UCSF &ndash; UC Berkeley Joint Program</p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <span class="cv-date">2018 — 2022</span>
+            <div class="cv-info">
+              <h3>B.S., Your Major</h3>
+              <p>Your Undergraduate University</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Experience -->
+        <div class="cv-section">
+          <h2>Research Experience</h2>
+
+          <div class="cv-entry">
+            <span class="cv-date">2022 — Present</span>
+            <div class="cv-info">
+              <h3>Graduate Researcher</h3>
+              <p>Lab Name — UCSF / UC Berkeley</p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <span class="cv-date">2020 — 2022</span>
+            <div class="cv-info">
+              <h3>Undergraduate Researcher</h3>
+              <p>Lab Name — University</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publications -->
+        <div class="cv-section">
+          <h2>Publications</h2>
+
+          <div class="cv-entry">
+            <span class="cv-date">2026</span>
+            <div class="cv-info">
+              <h3>Title of Publication</h3>
+              <p>Chung, C., et al. — Journal Name</p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <span class="cv-date">2025</span>
+            <div class="cv-info">
+              <h3>Title of Publication</h3>
+              <p>Chung, C., et al. — Journal Name</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="cv-section">
+          <h2>Awards &amp; Honors</h2>
+
+          <div class="cv-entry">
+            <span class="cv-date">2024</span>
+            <div class="cv-info">
+              <h3>Award Name</h3>
+              <p>Granting Organization</p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <span class="cv-date">2022</span>
+            <div class="cv-info">
+              <h3>Award Name</h3>
+              <p>Granting Organization</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="cv-section">
+          <h2>Skills</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0;">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Molecular Biology</span>
+            <span class="tag">Cell Culture</span>
+            <span class="tag">Microscopy</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Christian Chung</p>
+    </div>
+  </footer>
+
+</body>
+</html>
