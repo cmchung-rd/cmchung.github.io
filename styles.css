@@ -1,6 +1,6 @@
 /* ============================================
    Christian Chung — Personal Portfolio
-   Rustic Film Photography Aesthetic
+   Monochrome minimalist design
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -11,23 +11,16 @@
 }
 
 :root {
-  /* Warm film palette */
-  --black: #1a1510;
-  --dark: #231e17;
-  --gray-700: #b8a88a;
-  --gray-500: #8a7b65;
-  --gray-400: #6d6052;
-  --gray-300: #4a4035;
-  --gray-200: #352e26;
-  --gray-100: #2a241d;
-  --gray-50: #221d17;
-  --white: #e8dcc8;
-  --cream: #d4c5a9;
-  --amber: #c9a84c;
-  --amber-muted: #b89a45;
-  --warm-highlight: #e2c67b;
-  --bg: #1a1510;
-  --bg-elevated: #221d17;
+  --black: #111;
+  --dark: #222;
+  --gray-700: #444;
+  --gray-500: #777;
+  --gray-400: #999;
+  --gray-300: #bbb;
+  --gray-200: #ddd;
+  --gray-100: #eee;
+  --gray-50: #f7f7f7;
+  --white: #fff;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --max-width: 960px;
@@ -42,57 +35,26 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--white);
-  background: var(--bg);
+  color: var(--black);
+  background: var(--white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
-}
-
-/* Film grain overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-}
-
-/* Vignette effect */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9998;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(10, 8, 5, 0.4) 100%);
 }
 
 a {
-  color: var(--cream);
+  color: var(--black);
   text-decoration: none;
   transition: color var(--transition);
 }
 
 a:hover {
-  color: var(--warm-highlight);
+  color: var(--gray-500);
 }
 
 img {
   max-width: 100%;
   display: block;
-  filter: sepia(0.15) saturate(0.85) brightness(0.95) contrast(1.05);
 }
 
 /* --- Typography --- */
@@ -101,7 +63,6 @@ h1 {
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.2;
-  color: var(--white);
 }
 
 h2 {
@@ -109,14 +70,12 @@ h2 {
   font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
-  color: var(--cream);
 }
 
 h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: var(--white);
 }
 
 p {
@@ -129,7 +88,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-400);
 }
 
 /* --- Navigation --- */
@@ -139,10 +98,10 @@ nav {
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: rgba(26, 21, 16, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-100);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -163,7 +122,6 @@ nav {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--white);
 }
 
 .nav-links {
@@ -184,7 +142,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--warm-highlight);
+  color: var(--black);
 }
 
 .nav-links a.active::after {
@@ -194,7 +152,7 @@ nav {
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--amber);
+  background: var(--black);
 }
 
 /* Mobile nav toggle */
@@ -210,7 +168,7 @@ nav {
   display: block;
   width: 20px;
   height: 1.5px;
-  background: var(--cream);
+  background: var(--black);
   margin: 5px 0;
   transition: var(--transition);
 }
@@ -249,12 +207,11 @@ section {
 
 .hero-content h1 {
   margin-bottom: 1.25rem;
-  color: var(--white);
 }
 
 .hero-content .subtitle {
   font-size: 1rem;
-  color: var(--gray-700);
+  color: var(--gray-500);
   font-weight: 300;
   letter-spacing: 0.02em;
   margin-bottom: 0.5rem;
@@ -262,7 +219,7 @@ section {
 
 .hero-content .affiliation {
   font-size: 0.85rem;
-  color: var(--gray-500);
+  color: var(--gray-400);
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -288,8 +245,8 @@ section {
 }
 
 .hero-links a:hover {
-  color: var(--warm-highlight);
-  border-bottom-color: var(--amber);
+  color: var(--black);
+  border-bottom-color: var(--black);
 }
 
 /* --- Page Header --- */
@@ -301,14 +258,12 @@ section {
 .page-header h1 {
   font-size: 2rem;
   font-weight: 300;
-  color: var(--white);
 }
 
 .page-header p {
   margin-top: 1rem;
   font-size: 1rem;
   max-width: 600px;
-  color: var(--gray-700);
 }
 
 /* --- Cards Grid --- */
@@ -324,7 +279,7 @@ section {
   gap: 2.5rem;
   align-items: start;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .card:last-child {
@@ -338,7 +293,7 @@ section {
   object-fit: cover;
   border-radius: 4px;
   background: var(--gray-50);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--gray-100);
 }
 
 .card-body h3 {
@@ -346,7 +301,6 @@ section {
   font-weight: 600;
   margin-bottom: 0.75rem;
   line-height: 1.4;
-  color: var(--white);
 }
 
 .card-body p {
@@ -367,15 +321,15 @@ section {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-500);
   border-bottom: 1px solid var(--gray-300);
   padding-bottom: 1px;
   transition: all var(--transition);
 }
 
 .card-links a:hover {
-  color: var(--warm-highlight);
-  border-bottom-color: var(--amber);
+  color: var(--black);
+  border-bottom-color: var(--black);
 }
 
 /* --- Publication List --- */
@@ -385,7 +339,7 @@ section {
 
 .pub-item {
   padding: 1.75rem 0;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-100);
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 2rem;
@@ -399,7 +353,7 @@ section {
 .pub-year {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--amber-muted);
+  color: var(--gray-400);
   letter-spacing: 0.04em;
   padding-top: 0.15rem;
 }
@@ -409,7 +363,6 @@ section {
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 0.35rem;
-  color: var(--white);
 }
 
 .pub-body .pub-authors {
@@ -436,14 +389,14 @@ section {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-500);
   border-bottom: 1px solid var(--gray-300);
   padding-bottom: 1px;
 }
 
 .pub-body .pub-links a:hover {
-  color: var(--warm-highlight);
-  border-bottom-color: var(--amber);
+  color: var(--black);
+  border-bottom-color: var(--black);
 }
 
 /* --- About / Text Content --- */
@@ -460,19 +413,17 @@ section {
   object-fit: cover;
   border-radius: 4px;
   background: var(--gray-50);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--gray-100);
 }
 
 .about-text h2 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: var(--cream);
 }
 
 .about-text p {
   font-size: 0.95rem;
   margin-bottom: 1rem;
-  color: var(--gray-700);
 }
 
 .about-details {
@@ -484,7 +435,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-400);
   margin-bottom: 0.25rem;
 }
 
@@ -504,7 +455,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-400);
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--gray-200);
@@ -527,7 +478,6 @@ section {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.15rem;
-  color: var(--white);
 }
 
 .cv-info p {
@@ -544,7 +494,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-500);
   border: 1px solid var(--gray-300);
   padding: 0.6rem 1.25rem;
   border-radius: 4px;
@@ -553,8 +503,8 @@ section {
 }
 
 .cv-download:hover {
-  color: var(--warm-highlight);
-  border-color: var(--amber);
+  color: var(--black);
+  border-color: var(--black);
 }
 
 /* --- Startups / Misc Grid --- */
@@ -568,13 +518,11 @@ section {
   padding: 2rem;
   border: 1px solid var(--gray-200);
   border-radius: 4px;
-  transition: border-color var(--transition), background var(--transition);
-  background: var(--bg-elevated);
+  transition: border-color var(--transition);
 }
 
 .item-card:hover {
-  border-color: var(--gray-300);
-  background: rgba(42, 36, 29, 0.8);
+  border-color: var(--gray-400);
 }
 
 .item-card .label {
@@ -584,13 +532,11 @@ section {
 .item-card h3 {
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
-  color: var(--white);
 }
 
 .item-card p {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: var(--gray-700);
 }
 
 .item-card .card-links {
@@ -609,7 +555,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-muted);
+  color: var(--gray-400);
   margin-bottom: 0.3rem;
   margin-top: 1.5rem;
 }
@@ -624,21 +570,20 @@ section {
 }
 
 .contact-info dd a {
-  color: var(--cream);
+  color: var(--gray-700);
   border-bottom: 1px solid var(--gray-300);
   padding-bottom: 1px;
 }
 
 .contact-info dd a:hover {
-  color: var(--warm-highlight);
-  border-bottom-color: var(--amber);
+  color: var(--black);
+  border-bottom-color: var(--black);
 }
 
 .contact-social {
   display: flex;
   gap: 1.25rem;
   margin-top: 2rem;
-  flex-wrap: wrap;
 }
 
 .contact-social a {
@@ -650,12 +595,12 @@ section {
 }
 
 .contact-social a:hover {
-  color: var(--warm-highlight);
+  color: var(--black);
 }
 
 /* --- Footer --- */
 footer {
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid var(--gray-100);
   padding: 2.5rem 0;
   text-align: center;
 }
@@ -673,8 +618,8 @@ footer p {
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--amber-muted);
-  background: rgba(201, 168, 76, 0.08);
+  color: var(--gray-500);
+  background: var(--gray-50);
   border: 1px solid var(--gray-200);
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
@@ -700,8 +645,8 @@ footer p {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-100);
     flex-direction: column;
     padding: 1.5rem 2rem;
     gap: 1.25rem;
